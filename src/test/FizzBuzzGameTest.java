@@ -38,4 +38,12 @@ public class FizzBuzzGameTest {
 
         assertEquals("1\n2\n3\n4\nBuzz\n6\n7\n8\n9\nBuzz\n11\n12\n13\n14\nBuzz\n", outContent.toString());
     }
+
+    @Test
+    public void testFizzBuzzIsRight() throws Exception {
+        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+        fizzBuzzGame.fizzBuzz(15);
+
+        assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n", outContent.toString());
+    }
 }
