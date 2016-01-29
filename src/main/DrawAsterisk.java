@@ -1,4 +1,4 @@
-public class Main {
+public class DrawAsterisk {
 
     public static void main(String[] args) {
         System.out.println("*");
@@ -64,5 +64,9 @@ public class Main {
             }
             System.out.println();
         }
+    }
+
+    public void diamondWithName(int i) {
+
     }
 }

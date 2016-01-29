@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class exampleTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    Main main = new Main();
+    DrawAsterisk drawAsterisk = new DrawAsterisk();
 
     @Before
     public void setUpStreams() {
@@ -18,7 +18,7 @@ public class exampleTest {
     @Test
     public void testOutputOneAsterisk() throws Exception {
 
-        main.oneAsterisk();
+        drawAsterisk.oneAsterisk();
 
         assertEquals("*\n", outContent.toString());
     }
@@ -26,7 +26,7 @@ public class exampleTest {
     @Test
     public void testHorizontalLine() throws Exception {
 
-        main.horizontalLine(8);
+        drawAsterisk.horizontalLine(8);
 
         assertEquals("********\n", outContent.toString());
     }
@@ -34,32 +34,55 @@ public class exampleTest {
     @Test
     public void testVerticalLine() throws Exception {
 
-        main.verticalLine(3);
+        drawAsterisk.verticalLine(3);
 
-        assertEquals("*\n*\n*\n", outContent.toString());
+        assertEquals("*\n" +
+                     "*\n" +
+                     "*\n", outContent.toString());
     }
 
     @Test
     public void testTriangle() throws Exception {
 
-        main.triangle(3);
+        drawAsterisk.triangle(3);
 
-        assertEquals("*\n**\n***\n", outContent.toString());
+        assertEquals("*\n" +
+                     "**\n" +
+                     "***\n", outContent.toString());
     }
 
     @Test
     public void testIsoscelesTriangle() throws Exception {
 
-        main.isoscelesTriangle(4);
+        drawAsterisk.isoscelesTriangle(4);
 
-        assertEquals("   *\n  ***\n *****\n*******\n", outContent.toString());
+        assertEquals("   *\n" +
+                     "  ***\n" +
+                     " *****\n" +
+                     "*******\n", outContent.toString());
     }
 
     @Test
     public void testDiamondTest() throws Exception {
 
-        main.diamond(3);
+        drawAsterisk.diamond(3);
 
-        assertEquals("  *\n ***\n*****\n ***\n  *\n", outContent.toString());
+        assertEquals("  *\n" +
+                     " ***\n" +
+                     "*****\n" +
+                     " ***\n" +
+                     "  *\n", outContent.toString());
+    }
+
+    @Test
+    public void testDiamondWithName() throws Exception {
+
+        drawAsterisk.diamondWithName(3);
+
+        assertEquals("  *\n" +
+                     " ***\n" +
+                     "*****\n" +
+                     " ***\n" +
+                     "  *\n", outContent.toString());
     }
 }
