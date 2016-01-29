@@ -54,4 +54,12 @@ public class exampleTest {
 
         assertEquals("   *\n  ***\n *****\n*******\n", outContent.toString());
     }
+
+    @Test
+    public void testDiamondTest() throws Exception {
+
+        main.diamond(3);
+
+        assertEquals("  *\n ***\n*****\n ***\n  *\n", outContent.toString());
+    }
 }
