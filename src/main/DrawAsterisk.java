@@ -22,49 +22,33 @@ public class DrawAsterisk {
 
     public void isoscelesTriangle(int line) {
         for (int i = 0; i < line; i++) {
-            drawSpace(line - i - 1);
-            drawAsterisk(2 * i + 1);
+            drawOneLine(line - i - 1, 2 * i + 1);
         }
     }
 
     public void diamond(int midleLine) {
-        for (int i = 0; i < midleLine; i++) {
-            drawSpace(midleLine - i - 1);
-            drawAsterisk(2 * i + 1);
-        }
+        isoscelesTriangle(midleLine);
 
         int secondHight = midleLine - 1;
 
         for (int i = secondHight - 1; i >= 0; i--) {
-            drawSpace(midleLine - i - 1);
-            drawAsterisk(2 * i + 1);
+            drawOneLine(midleLine - i - 1, 2 * i + 1);
         }
     }
 
-    public void diamondWithName(int midleLine) {
-        int secondMidleLine = midleLine - 1;
+    public void diamondWithName(int middleLine) {
+        int secondMidleLine = middleLine - 1;
         for (int i = 0; i < secondMidleLine; i++) {
-            for (int j = midleLine - i - 1; j > 0; j--) {
-                System.out.print(" ");
-            }
-            for (int k = 2 * i + 1; k > 0; k--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawOneLine(middleLine - i - 1, 2 * i + 1);
         }
 
-        int secondHight = midleLine - 1;
+        int secondHight = middleLine - 1;
 
         System.out.println("Sli");
 
         for (int i = secondHight - 1; i >= 0; i--) {
-            for (int j = midleLine - i - 1; j > 0; j--){
-                System.out.print(" ");
-            }
-            for (int k = 2 * i + 1; k > 0; k--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawSpace(middleLine - i - 1);
+            drawAsterisk(2 * i + 1);
         }
 
     }
