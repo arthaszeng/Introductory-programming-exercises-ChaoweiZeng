@@ -8,10 +8,16 @@ public class Main {
         System.out.println("*");
     }
 
-    public void horizontalLine(int number) {
-        while ( number-- != 0) {
+    public void horizontalLine(int row) {
+        while ( row-- != 0) {
             System.out.print("*");
         }
         System.out.println();
+    }
+
+    public void verticalLine(int line) {
+        while (line-- != 0){
+            System.out.println("*");
+        }
     }
 }

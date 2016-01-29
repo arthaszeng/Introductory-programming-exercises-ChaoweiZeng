@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class exampleTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -29,5 +30,13 @@ public class exampleTest {
         main.horizontalLine(8);
 
         assertEquals("********\n", outContent.toString());
+    }
+
+    @Test
+    public void testVerticalLine() throws Exception {
+
+        main.verticalLine(3);
+
+        assertEquals("*\n*\n*\n", outContent.toString());
     }
 }
