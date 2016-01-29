@@ -26,29 +26,29 @@ public class DrawAsterisk {
         }
     }
 
-    public void diamond(int midleLine) {
-        isoscelesTriangle(midleLine);
+    public void diamond(int middleLIne) {
+        isoscelesTriangle(middleLIne);
 
-        int secondHight = midleLine - 1;
+        int secondheight = middleLIne - 1;
 
-        for (int i = secondHight - 1; i >= 0; i--) {
-            drawOneLine(midleLine - i - 1, 2 * i + 1);
+        for (int i = secondheight - 1; i >= 0; i--) {
+            drawOneLine(middleLIne - i - 1, 2 * i + 1);
         }
     }
 
     public void diamondWithName(int middleLine) {
-        int secondMidleLine = middleLine - 1;
-        for (int i = 0; i < secondMidleLine; i++) {
+        int secondMiddleLIne = middleLine - 1;
+
+        for (int i = 0; i < secondMiddleLIne; i++) {
             drawOneLine(middleLine - i - 1, 2 * i + 1);
         }
 
-        int secondHight = middleLine - 1;
+        int secondHeight = middleLine - 1;
 
         System.out.println("Sli");
 
-        for (int i = secondHight - 1; i >= 0; i--) {
-            drawSpace(middleLine - i - 1);
-            drawAsterisk(2 * i + 1);
+        for (int i = secondHeight - 1; i >= 0; i--) {
+            drawOneLine(middleLine - i - 1, 2 * i + 1);
         }
 
     }
