@@ -29,4 +29,16 @@ public class Main {
             System.out.println();
         }
     }
+
+    public void isoscelesTriangle(int line) {
+        for (int i = 0; i < line; i++) {
+            for (int j = line - i - 1; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 2 * i + 1; k > 0; k--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }

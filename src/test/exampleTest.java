@@ -46,4 +46,12 @@ public class exampleTest {
 
         assertEquals("*\n**\n***\n", outContent.toString());
     }
+
+    @Test
+    public void testIsoscelesTriangle() throws Exception {
+
+        main.isoscelesTriangle(4);
+
+        assertEquals("   *\n  ***\n *****\n*******\n", outContent.toString());
+    }
 }
