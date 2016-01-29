@@ -29,9 +29,9 @@ public class DrawAsterisk {
     public void diamond(int middleLIne) {
         isoscelesTriangle(middleLIne);
 
-        int secondheight = middleLIne - 1;
+        int secondHeight = middleLIne - 1;
 
-        for (int i = secondheight - 1; i >= 0; i--) {
+        for (int i = secondHeight - 1; i >= 0; i--) {
             drawOneLine(middleLIne - i - 1, 2 * i + 1);
         }
     }

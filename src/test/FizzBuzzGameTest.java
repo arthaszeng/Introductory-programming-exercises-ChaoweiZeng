@@ -8,7 +8,6 @@ import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzGameTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    DrawAsterisk drawAsterisk = new DrawAsterisk();
 
     @Before
     public void setUpStreams() {
@@ -20,7 +19,21 @@ public class FizzBuzzGameTest {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         fizzBuzzGame.normalNumber(15);
 
-        assertEquals("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n", outContent.toString());
+        assertEquals("1\n" +
+                "2\n" +
+                "3\n" +
+                "4\n" +
+                "5\n" +
+                "6\n" +
+                "7\n" +
+                "8\n" +
+                "9\n" +
+                "10\n" +
+                "11\n" +
+                "12\n" +
+                "13\n" +
+                "14\n" +
+                "15\n", outContent.toString());
     }
 
     @Test
@@ -28,7 +41,21 @@ public class FizzBuzzGameTest {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         fizzBuzzGame.fizz(15);
 
-        assertEquals("1\n2\nFizz\n4\n5\nFizz\n7\n8\nFizz\n10\n11\nFizz\n13\n14\nFizz\n", outContent.toString());
+        assertEquals("1\n" +
+                "2\n" +
+                "Fizz\n" +
+                "4\n" +
+                "5\n" +
+                "Fizz\n" +
+                "7\n" +
+                "8\n" +
+                "Fizz\n" +
+                "10\n" +
+                "11\n" +
+                "Fizz\n" +
+                "13\n" +
+                "14\n" +
+                "Fizz\n", outContent.toString());
     }
 
     @Test
@@ -36,7 +63,21 @@ public class FizzBuzzGameTest {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         fizzBuzzGame.buzz(15);
 
-        assertEquals("1\n2\n3\n4\nBuzz\n6\n7\n8\n9\nBuzz\n11\n12\n13\n14\nBuzz\n", outContent.toString());
+        assertEquals("1\n" +
+                "2\n" +
+                "3\n" +
+                "4\n" +
+                "Buzz\n" +
+                "6\n" +
+                "7\n" +
+                "8\n" +
+                "9\n" +
+                "Buzz\n" +
+                "11\n" +
+                "12\n" +
+                "13\n" +
+                "14\n" +
+                "Buzz\n", outContent.toString());
     }
 
     @Test
@@ -44,6 +85,20 @@ public class FizzBuzzGameTest {
         FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
         fizzBuzzGame.fizzBuzz(15);
 
-        assertEquals("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n", outContent.toString());
+        assertEquals("1\n" +
+                "2\n" +
+                "Fizz\n" +
+                "4\n" +
+                "Buzz\n" +
+                "Fizz\n" +
+                "7\n" +
+                "8\n" +
+                "Fizz\n" +
+                "Buzz\n" +
+                "11\n" +
+                "Fizz\n" +
+                "13\n" +
+                "14\n" +
+                "FizzBuzz\n", outContent.toString());
     }
 }
