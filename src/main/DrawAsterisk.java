@@ -42,9 +42,9 @@ public class DrawAsterisk {
         }
     }
 
-    public void diamond(int hight) {
-        for (int i = 0; i < hight; i++) {
-            for (int j = hight - i - 1; j > 0; j--) {
+    public void diamond(int midleLine) {
+        for (int i = 0; i < midleLine; i++) {
+            for (int j = midleLine - i - 1; j > 0; j--) {
                 System.out.print(" ");
             }
             for (int k = 2 * i + 1; k > 0; k--){
@@ -53,10 +53,10 @@ public class DrawAsterisk {
             System.out.println();
         }
 
-        int secondHight = hight - 1;
+        int secondHight = midleLine - 1;
 
         for (int i = secondHight - 1; i >= 0; i--) {
-            for (int j = hight - i - 1; j > 0; j--){
+            for (int j = midleLine - i - 1; j > 0; j--){
                 System.out.print(" ");
             }
             for (int k = 2 * i + 1; k > 0; k--){
@@ -66,7 +66,31 @@ public class DrawAsterisk {
         }
     }
 
-    public void diamondWithName(int i) {
+    public void diamondWithName(int midleLine) {
+        int secondMidleLine = midleLine - 1;
+        for (int i = 0; i < secondMidleLine; i++) {
+            for (int j = midleLine - i - 1; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 2 * i + 1; k > 0; k--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        int secondHight = midleLine - 1;
+
+        System.out.println("Sli");
+
+        for (int i = secondHight - 1; i >= 0; i--) {
+            for (int j = midleLine - i - 1; j > 0; j--){
+                System.out.print(" ");
+            }
+            for (int k = 2 * i + 1; k > 0; k--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 
     }
 }

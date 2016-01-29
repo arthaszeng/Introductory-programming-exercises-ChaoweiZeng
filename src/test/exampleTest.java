@@ -81,7 +81,7 @@ public class exampleTest {
 
         assertEquals("  *\n" +
                      " ***\n" +
-                     "*****\n" +
+                     "Sli\n" +
                      " ***\n" +
                      "  *\n", outContent.toString());
     }
