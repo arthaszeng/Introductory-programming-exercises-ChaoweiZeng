@@ -7,4 +7,11 @@ public class Main {
     public void oneAsterisk() {
         System.out.println("*");
     }
+
+    public void horizontalLine(int number) {
+        while ( number-- != 0) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
 }

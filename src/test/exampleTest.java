@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class exampleTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    Main main = new Main();
 
     @Before
     public void setUpStreams() {
@@ -16,9 +17,17 @@ public class exampleTest {
 
     @Test
     public void testOutputOneAsterisk() throws Exception {
-        Main main = new Main();
+
         main.oneAsterisk();
 
         assertEquals("*\n", outContent.toString());
+    }
+
+    @Test
+    public void testHorizontalLine() throws Exception {
+
+        main.horizontalLine(8);
+
+        assertEquals("********\n", outContent.toString());
     }
 }
