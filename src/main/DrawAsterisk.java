@@ -1,68 +1,43 @@
 public class DrawAsterisk {
 
-    public static void main(String[] args) {
-        System.out.println("*");
-    }
-
     public void oneAsterisk() {
         System.out.println("*");
     }
 
-    public void horizontalLine(int row) {
-        while ( row-- != 0) {
-            System.out.print("*");
-        }
-        System.out.println();
+    public void horizontalLine(int size) {
+        drawAsterisk(size);
     }
 
     public void verticalLine(int line) {
         while (line-- != 0){
-            System.out.println("*");
+            drawAsterisk(1);
         }
     }
 
-    public void triangle(int line) {
+    public void normalTriangle(int line) {
         for (int i = 0; i < line; i++){
-            for (int j = i; j >= 0; j--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawAsterisk(i + 1);
         }
     }
 
     public void isoscelesTriangle(int line) {
         for (int i = 0; i < line; i++) {
-            for (int j = line - i - 1; j > 0; j--) {
-                System.out.print(" ");
-            }
-            for (int k = 2 * i + 1; k > 0; k--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawSpace(line - i - 1);
+            drawAsterisk(2 * i + 1);
         }
     }
 
     public void diamond(int midleLine) {
         for (int i = 0; i < midleLine; i++) {
-            for (int j = midleLine - i - 1; j > 0; j--) {
-                System.out.print(" ");
-            }
-            for (int k = 2 * i + 1; k > 0; k--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawSpace(midleLine - i - 1);
+            drawAsterisk(2 * i + 1);
         }
 
         int secondHight = midleLine - 1;
 
         for (int i = secondHight - 1; i >= 0; i--) {
-            for (int j = midleLine - i - 1; j > 0; j--){
-                System.out.print(" ");
-            }
-            for (int k = 2 * i + 1; k > 0; k--){
-                System.out.print("*");
-            }
-            System.out.println();
+            drawSpace(midleLine - i - 1);
+            drawAsterisk(2 * i + 1);
         }
     }
 
@@ -92,5 +67,23 @@ public class DrawAsterisk {
             System.out.println();
         }
 
+    }
+
+    public void drawOneLine(int spaceNumber, int asteriskNumber) {
+        DrawAsterisk.drawSpace(spaceNumber);
+        DrawAsterisk.drawAsterisk(asteriskNumber);
+    }
+
+    private static void drawAsterisk(int asteriskNumber) {
+        while (asteriskNumber-- > 0) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+    private static void drawSpace(int spaceNumber) {
+        while (spaceNumber-- > 0) {
+            System.out.print(" ");
+        }
     }
 }

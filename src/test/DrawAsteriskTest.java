@@ -17,7 +17,6 @@ public class DrawAsteriskTest {
 
     @Test
     public void testOutputOneAsterisk() throws Exception {
-
         drawAsterisk.oneAsterisk();
 
         assertEquals("*\n", outContent.toString());
@@ -25,7 +24,6 @@ public class DrawAsteriskTest {
 
     @Test
     public void testHorizontalLine() throws Exception {
-
         drawAsterisk.horizontalLine(8);
 
         assertEquals("********\n", outContent.toString());
@@ -33,7 +31,6 @@ public class DrawAsteriskTest {
 
     @Test
     public void testVerticalLine() throws Exception {
-
         drawAsterisk.verticalLine(3);
 
         assertEquals("*\n" +
@@ -43,8 +40,7 @@ public class DrawAsteriskTest {
 
     @Test
     public void testTriangle() throws Exception {
-
-        drawAsterisk.triangle(3);
+        drawAsterisk.normalTriangle(3);
 
         assertEquals("*\n" +
                      "**\n" +
@@ -52,8 +48,14 @@ public class DrawAsteriskTest {
     }
 
     @Test
-    public void testIsoscelesTriangle() throws Exception {
+    public void testDrawOneLine() throws Exception {
+        drawAsterisk.drawOneLine(2, 3);
 
+        assertEquals("  ***\n", outContent.toString());
+    }
+
+    @Test
+    public void testIsoscelesTriangle() throws Exception {
         drawAsterisk.isoscelesTriangle(4);
 
         assertEquals("   *\n" +
@@ -64,7 +66,6 @@ public class DrawAsteriskTest {
 
     @Test
     public void testDiamondTest() throws Exception {
-
         drawAsterisk.diamond(3);
 
         assertEquals("  *\n" +
@@ -76,7 +77,6 @@ public class DrawAsteriskTest {
 
     @Test
     public void testDiamondWithName() throws Exception {
-
         drawAsterisk.diamondWithName(3);
 
         assertEquals("  *\n" +
