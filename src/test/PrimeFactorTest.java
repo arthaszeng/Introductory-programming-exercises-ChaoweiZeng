@@ -32,7 +32,7 @@ public class PrimeFactorTest {
     }
 
     @Test
-    public void testNIs90() throws Exception {
+    public void testNIs2310() throws Exception {
         List result = primeFactor.generate(2310);
         assertEquals(2, result.get(0));
         assertEquals(3, result.get(1));
