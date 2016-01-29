@@ -6,7 +6,7 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class exampleTest {
+public class DrawAsteriskTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     DrawAsterisk drawAsterisk = new DrawAsterisk();
 
