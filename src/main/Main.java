@@ -20,4 +20,13 @@ public class Main {
             System.out.println("*");
         }
     }
+
+    public void triangle(int line) {
+        for (int i = 0; i < line; i++){
+            for (int j = i; j >= 0; j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
